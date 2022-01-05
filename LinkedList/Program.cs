@@ -1,6 +1,6 @@
 ﻿using System;
 
-
+//LINKED LIST PROBLEMS
 namespace LinkedList
 {
     class Program
@@ -13,6 +13,7 @@ namespace LinkedList
             list.Add(30);
             list.Add(70);
             list.Display();
+            
         }
     }
 }
