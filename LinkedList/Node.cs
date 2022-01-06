@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace LinkedList
 {
+
+
    internal class Node
     {
         public int data;//values in node

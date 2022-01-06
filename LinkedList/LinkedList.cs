@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LinkedList
 {
-    internal class LinkedList
+    internal class LinkedList 
     {
         internal Node head; // starting point of linked list
         internal void Add(int data)
@@ -40,6 +40,47 @@ namespace LinkedList
                 Console.WriteLine(" " + temp.data);
              temp=temp.next;
             }
+        }
+        //INSERT A NODE BETWEEN TWO NODES
+        internal  Node InsertInPosition(int position,int data)
+        {
+
+           
+            if (position<1)
+            {
+                Console.WriteLine("INVALID POSITION");
+            }
+            if(position == 1)
+            {
+              Node  newNode = new Node(data);
+                newNode.next = this.head;
+                head = head.next;
+             
+            }
+            else
+            {
+                while(position-- !=0)
+                {
+               
+                    if (position == 1)
+                    {
+                        Node node = new Node(data);
+                        node.next = this.head.next;
+                        break;
+                        
+                    }
+                    head = head.next;
+                    if (position!=1)
+                    {
+                        Console.WriteLine("POSITION OUT OF RANGE");
+                    }
+                }             
+            }
+
+            Console.WriteLine("INSERTED VALUE IS :" + head.next.data);
+            return head;
+
+
         }
     }
 }
