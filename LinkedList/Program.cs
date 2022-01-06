@@ -14,7 +14,9 @@ namespace LinkedList
             list.Add(70);
             list.Display();
             list.InsertInPosition(2,30);//inserting 30 in second position
-            
+            list.RemoveFirstNode();
+            Console.WriteLine("AFTER REMOVING FIRST NODE" );
+            list.Display();
         }
     }
 }

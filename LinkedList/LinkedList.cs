@@ -79,7 +79,16 @@ namespace LinkedList
 
             Console.WriteLine("INSERTED VALUE IS :" + head.next.data);
             return head;
-
+        }
+        //Remove First Node
+        internal Node RemoveFirstNode()
+        {
+            if(this.head == null)
+            {
+                return null;
+            }
+            this.head = this.head.next;
+            return this.head;
 
         }
     }
