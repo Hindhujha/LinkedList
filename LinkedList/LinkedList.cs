@@ -91,5 +91,24 @@ namespace LinkedList
             return this.head;
 
         }
+        //Remove Last Node
+        internal Node RemoveLastNode()
+        {
+            if(head == null)
+            {
+                return null;
+            }
+            if(head.next == null)
+            {
+                return null;
+            }
+            Node NewNode = head;
+            while(NewNode.next.next!= null)
+            {
+                NewNode= NewNode.next;
+            }
+            NewNode.next = null;
+            return head;
+        }
     }
 }
