@@ -149,5 +149,50 @@ namespace LinkedList
             prev.next = temp.next;
             return prev.next;
         }
+        //ARRANGED IN ASCENDING ORDER
+        internal void Ascending(Node arrange)
+        {
+            if (this.head == null)
+            {
+                this.head = arrange;
+            }
+
+            else if (this.head.data >= arrange.data)
+            {
+                arrange.next = this.head;
+                this.head = arrange;
+            }
+            else
+            {
+                var temp = this.head;
+                while (temp.next != null && temp.next.data < arrange.data)
+                {
+                    temp = temp.next;
+                }
+                arrange.next = temp.next;
+                temp.next= arrange;
+
+            }
+        }
+        internal void Arranged_In_Sequence()
+        {
+           
+          if(this.head == null)
+            {
+                return;
+            }
+            var temp = this.head;
+            Node element = null;
+            this.head= null;
+            while(temp != null)
+            {
+                element = temp;
+                temp=temp.next;
+                element.next = null;
+                this.Ascending(element);
+            }
+
+        } 
+        
     }
 }
