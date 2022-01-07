@@ -125,5 +125,29 @@ namespace LinkedList
             
             return null;
         }
+
+        //Remove Particular Node
+        internal Node DeleteNodebyKey(int key)
+        {
+
+            Node temp = this.head;
+            Node prev = null;
+            if (temp != null && temp.data == key)
+            {
+             this.head = temp.next;
+                return head ;
+            }
+            while (temp != null && temp.data != key)
+            {
+                prev = temp;
+                temp = temp.next;
+            }
+            if (temp == null)
+            {
+                return null;
+            }
+            prev.next = temp.next;
+            return prev.next;
+        }
     }
 }
