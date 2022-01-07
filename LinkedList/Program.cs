@@ -12,14 +12,12 @@ namespace LinkedList
             list.Add(56);
             list.Add(30);
             list.Add(70);
-            list.Display();
-            list.InsertInPosition(2,30);//inserting 30 in second position
-            list.RemoveFirstNode();
-            Console.WriteLine("AFTER REMOVING FIRST NODE" );
-            list.Display();
-            list.RemoveLastNode();
-            Console.WriteLine("AFTER REMOVING LAST NODE");
-            list.Display();
+          //  list.Display();         
+           // list.InsertInPosition(2,30);//inserting 30 in second position
+            //list.RemoveFirstNode();
+         //   list.RemoveLastNode();
+           list.Search(30);//searching 30 in linked list
+          
         }
     }
 }
