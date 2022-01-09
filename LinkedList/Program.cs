@@ -3,7 +3,7 @@ using System.Collections.Generic;
 //LINKED LIST PROBLEMS
 namespace LinkedList
 { 
-    class Programg
+    class Program
     {
         static void Main(string[] args)
         {//creating a linked list
